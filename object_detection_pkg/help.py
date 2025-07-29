@@ -19,7 +19,7 @@ class Detectron2ObjectDetectionNode(Node):
         super().__init__('detectron2_object_detection_node')
         self.subscription = self.create_subscription(
             Image,
-            '/camera_front/image_raw/ffmpeg',  # Update if topic changes
+            '/camera_front/image_raw',  # Update if topic changes
             self.listener_callback,
             10
         )
