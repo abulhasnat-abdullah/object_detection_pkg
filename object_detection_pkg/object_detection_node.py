@@ -13,7 +13,7 @@ class ObjectDetectionNode(Node):
         super().__init__('object_detection_node')
         self.subscription = self.create_subscription(
             Image,
-            '/camera_front/image_raw/ffmpeg',
+            '/camera_front/image_raw',
             self.listener_callback,
             10
         )
