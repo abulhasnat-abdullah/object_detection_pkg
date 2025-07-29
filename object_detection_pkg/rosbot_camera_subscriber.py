@@ -15,7 +15,7 @@ class ObjectDetectionNode(Node):
         # Subscribe to ROSbot's camera image stream
         self.subscription = self.create_subscription(
             Image,
-            '/camera_front/image_raw/ffmpeg',  #  Change this if your image topic is different
+            '/camera_front/image_raw',  #  Change this if your image topic is different
             self.listener_callback,
             10
         )
